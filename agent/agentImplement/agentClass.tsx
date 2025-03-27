@@ -187,11 +187,13 @@ export class Agent<Context = any> {
         extend_system_message??undefined
       ).getSystemMessage(),
       {
-        max_input_tokens: this.settings.max_input_tokens,
-        include_attributes: this.settings.include_attributes,
-        message_context: this.settings.message_context,
-        sensitive_data,
-        available_file_paths: this.settings.available_file_paths,
+        maxTokens: this.settings.max_input_tokens,
+        numChatTurnsToKeep:10,
+        imageTokens:800,
+        includeAttributes: this.settings.include_attributes,
+        messageContext: this.settings.message_context,
+        sensitiveData:this.sensitive_data||undefined,
+        availableFilePath: this.settings.available_file_paths,
       },
       this.state.message_manager_state
     );

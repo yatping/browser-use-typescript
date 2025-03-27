@@ -14,11 +14,12 @@ import { AgentOutput } from "../types";
 class MessageManagerSettings {
     maxTokens: number = 12000;
     numChatTurnsToKeep: number = 10;
-    keepSystemMessageFirst: boolean = true;
-    excludeKeysForInnerTools: string[] = [];
-    saveChatHistory: boolean = false;
-    messagesFolder: string = "";
-    defaultModelName: string = "";
+    imageTokens:number=800;
+    includeAttributes:string[]=[]
+    messageContext?:string=undefined;
+    sensitiveData?:Record<string,string>;
+    availableFilePath?:string[]=[]
+
     
     constructor(init?: Partial<MessageManagerSettings>) {
         Object.assign(this, init);
@@ -37,12 +38,13 @@ class MessageManager {
     constructor(
         task: string, 
         systemMessage: SystemMessage, 
-        settings: MessageManagerSettings = new MessageManagerSettings()
+        settings: MessageManagerSettings = new MessageManagerSettings(),
+        state:MessageManagerState
     ) {
         this.task = task;
         this.systemMessage = systemMessage;
         this.settings = settings;
-        this.state = new MessageManagerState();
+        this.state = state
         
         // Add system message
         this.state.history.addMessage(

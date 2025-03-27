@@ -7,6 +7,7 @@ import { SelectorMap } from "../domTypes/domClass";
 import { randomUUID } from "crypto";
 import * as fs from 'fs';
 import * as path from 'path';
+import { MessageManagerState } from "./message_manager/types";
 
 // Define the ToolCallingMethod as a literal type
 type ToolCallingMethod = 'function_calling' | 'json_mode' | 'raw' | 'auto';
@@ -16,9 +17,7 @@ interface DOMHistoryElement {
     // Define properties based on your implementation
 }
 
-interface MessageManagerState {
-    // Define properties based on your implementation
-}
+
 
 class AgentSettings {
     use_vision: boolean = true;
@@ -83,7 +82,7 @@ class AgentState {
     last_plan: string | null = null;
     paused: boolean = false;
     stopped: boolean = false;
-    message_manager_state: MessageManagerState = {} as MessageManagerState;
+    message_manager_state: MessageManagerState = new MessageManagerState();
 }
 
 class AgentStepInfo {
