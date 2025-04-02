@@ -135,11 +135,8 @@ Manages the execution flow and coordinates between the agent and browser compone
 - `modifyElement()`: Modify element properties
 - `buildDomTreeOverlay()`: Create DOM tree visualization
 
+[234ef826394d5c7dd66d675e3a6374c0.webm](https://github.com/user-attachments/assets/bf9e6971-9e71-4232-bc0d-af3d5250ef21)
 
-<video width="640" height="640" controls>
-  <source src="https://asset.cloudinary.com/dqgclphiu/a86fcf4c5dc9ef5c14e81d3b1cb89911" type="video/webm">
-  Your browser does not support the video tag.
-</video>
 ## Contributing
 
 Contributions are welcome! Please read our contributing guidelines for details on our code of conduct and the process for submitting pull requests.
