@@ -136,8 +136,8 @@ Manages the execution flow and coordinates between the agent and browser compone
 - `buildDomTreeOverlay()`: Create DOM tree visualization
 
 
-<video width="640" height="360" controls>
-  <source src="https://res.cloudinary.com/dqgclphiu/video/upload/v1743565155/ffvecm7n8uwzrcugiqtl.webm" type="video/webm">
+<video width="640" height="640" controls>
+  <source src="https://asset.cloudinary.com/dqgclphiu/a86fcf4c5dc9ef5c14e81d3b1cb89911" type="video/webm">
   Your browser does not support the video tag.
 </video>
 ## Contributing
