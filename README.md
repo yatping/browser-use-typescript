@@ -135,6 +135,9 @@ Manages the execution flow and coordinates between the agent and browser compone
 - `modifyElement()`: Modify element properties
 - `buildDomTreeOverlay()`: Create DOM tree visualization
 
+
+[![GPT4o mini Test]
+(https://res.cloudinary.com/dqgclphiu/video/upload/v1743565155/ffvecm7n8uwzrcugiqtl.webm)
 ## Contributing
 
 Contributions are welcome! Please read our contributing guidelines for details on our code of conduct and the process for submitting pull requests.
