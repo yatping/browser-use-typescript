@@ -1,0 +1,16 @@
+{
+  "name": "browser-agent-extension",
+  "version": "1.0.0",
+  "description": "A Chrome extension that uses an agent to execute actions in the current tab",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "tsc -w",
+    "generate-icons": "node generate-icons.js"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.260",
+    "@types/node": "^20.11.19",
+    "sharp": "^0.33.2",
+    "typescript": "^5.3.3"
+  }
+} 
