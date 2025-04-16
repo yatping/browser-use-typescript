@@ -9,15 +9,38 @@ A Chrome extension that uses an agent to execute actions in the current tab. The
 npm install
 ```
 
-2. Build the extension:
+2. Generate icons:
+```bash
+npm run generate-icons
+```
+
+3. Build the extension:
 ```bash
 npm run build
 ```
 
-3. Load the extension in Chrome:
+4. Load the extension in Chrome:
 - Open Chrome and go to `chrome://extensions/`
 - Enable "Developer mode" in the top right
 - Click "Load unpacked" and select the `extension` folder
+
+## Development Server
+
+For easier development, you can use the development server:
+
+```bash
+npm run dev
+```
+
+This will:
+1. Build the extension
+2. Start a local server at http://localhost:3000
+3. Run the TypeScript compiler in watch mode for automatic recompilation
+
+To use the development server:
+1. Load the extension in Chrome as described above
+2. When you make changes to the code, the TypeScript compiler will automatically recompile
+3. Click the "Reload" button in chrome://extensions/ to reload the extension with your changes
 
 ## Project Structure
 
@@ -34,13 +57,15 @@ extension/
 ├── manifest.json          # Extension configuration
 ├── tsconfig.json          # TypeScript configuration
 ├── package.json           # Project dependencies
-└── build.js              # Build script
+├── build.js              # Build script
+└── dev-server.js         # Development server
 ```
 
 ## Development
 
 - Run `npm run watch` to automatically compile TypeScript files on changes
 - Run `npm run build` to build the extension
+- Run `npm run dev` to start the development server
 - After making changes, reload the extension in Chrome
 
 ## Features
@@ -50,6 +75,7 @@ extension/
 - Support for various actions (click, type, getText)
 - Clean and modern UI for user input
 - Error handling and status feedback
+- Development server for easier development
 
 ## TODO
 

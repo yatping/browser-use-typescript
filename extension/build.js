@@ -15,6 +15,10 @@ execSync('tsc', { stdio: 'inherit' });
 console.log('Copying popup.html...');
 fs.copyFileSync('src/popup.html', 'dist/popup.html');
 
+// Copy manifest.json to dist
+console.log('Copying manifest.json...');
+fs.copyFileSync('manifest.json', 'dist/manifest.json');
+
 // Copy icons directory if it exists
 if (fs.existsSync('icons')) {
   console.log('Copying icons...');
